@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports Preview Page</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <style>
+    /* Hide the mobile menu by default */
+    #mobile-menu {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <header class="relative">
+    <div class="absolute top-1/2 -left-6 transform -translate-y-1/2 z-20 mx-4">
+      <img src="./assets/Muranga.png" alt="Logo" class="w-24 h-24" />
+    </div>
+    <div class="bg-[#131313] py-2">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <!-- Hamburger Icon for Mobile -->
+        <div class="md:hidden">
+          <button
+            id="hamburger-btn"
+            class="text-white focus:outline-none focus:text-yellow-500"
+          >
+            <i class="fa fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- Login and Register Links -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="#" class="flex items-center hover:text-yellow-500 space-x-2">
+            <span class="bg-yellow-500 text-white text-xs rounded-full p-2">
+              <i class="fa fa-user-plus"></i>
+            </span>
+            <span>Login</span>
+          </a>
+          <a href="#" class="flex items-center hover:text-yellow-500 space-x-2">
+            <span class="bg-yellow-500 text-white text-xs rounded-full p-2">
+              <i class="fa fa-user-plus"></i>
+            </span>
+            <span>Register</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="bg-black py-2">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Main Navigation Links for Desktop -->
+        <nav class="hidden md:flex space-x-6 ml-16">
+          <a href="#" class="hover:text-yellow-500">News</a>
+          <a href="#" class="hover:text-yellow-500">Fixtures</a>
+          <a href="#" class="hover:text-yellow-500">Team</a>
+          <a href="#" class="hover:text-yellow-500">Statistics</a>
+          <a href="#" class="hover:text-yellow-500">Our Club</a>
+        </nav>
+        <div class="hidden md:flex items-center space-x-4 mr-30">
+          <a href="#" class="hover:text-yellow-500">Shop</a>
+        </div>
+      </div>
+    </div>
+    <div class="bg-yellow-500 h-2"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="bg-black py-2 md:hidden">
+      <nav class="flex flex-col items-start space-y-4 px-4">
+        <a href="#" class="hover:text-yellow-500">News</a>
+        <a href="#" class="hover:text-yellow-500">Fixtures</a>
+        <a href="#" class="hover:text-yellow-500">Team</a>
+        <a href="#" class="hover:text-yellow-500">Statistics</a>
+        <a href="#" class="hover:text-yellow-500">Our Club</a>
+        <a href="#" class="hover:text-yellow-500">Shop</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Rest of the page content here -->
+
+  <script>
+    // Toggle Mobile Menu
+    document.getElementById("hamburger-btn").addEventListener("click", function () {
+      const menu = document.getElementById("mobile-menu");
+      menu.style.display = menu.style.display === "none" || menu.style.display === "" ? "block" : "none";
+    });
+  </script>
+</body>
+</html>

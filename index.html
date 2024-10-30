@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body class="bg-gray-900 text-white">
-    <div class="relative">
+    <header class="relative">
       <div
         class="absolute top-1/2 -left-6 transform -translate-y-1/2 z-20 mx-4"
       >
@@ -62,8 +62,9 @@
         </div>
       </div>
       <div class="bg-yellow-500 h-2"></div>
-    </div>
-    <div class="relative">
+    </header>
+
+    <section class="relative">
       <img
         src="./assets/home-banner.jpg"
         alt="Background Image"
@@ -79,16 +80,18 @@
 
         <p class="text-gray-400 text-sm mt-2">⚽ First Team | 1 hr ago</p>
       </div>
-    </div>
+    </section>
 
-    <div class="relative">
+    <section class="relative">
       <div class="bg-black h-48"></div>
 
       <div class="bg-gradient-to-b from-yellow-500 to-gray-900 h-48"></div>
       <div class="absolute inset-0 flex justify-center py-8">
         <div class="flex space-x-4 mx-auto">
           <!-- Card 1 -->
-          <div class="bg-gray-800 shadow-lg rounded-lg overflow-hidden w-72">
+          <article
+            class="bg-gray-800 shadow-lg rounded-lg overflow-hidden w-72"
+          >
             <img
               src="./assets/soccer1.png"
               alt="Inside View"
@@ -102,10 +105,12 @@
                 <span>🎬 05:00</span>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- Card 2 -->
-          <div class="bg-gray-800 shadow-lg rounded-lg overflow-hidden w-72">
+          <article
+            class="bg-gray-800 shadow-lg rounded-lg overflow-hidden w-72"
+          >
             <img
               src="./assets/soccer2.png"
               alt="Welcome Event"
@@ -118,10 +123,12 @@
                 <span class="ml-auto">7 hrs ago</span>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- Card 3 -->
-          <div class="bg-gray-800 shadow-lg rounded-lg overflow-hidden w-72">
+          <article
+            class="bg-gray-800 shadow-lg rounded-lg overflow-hidden w-72"
+          >
             <img
               src="./assets/soccer3.png"
               alt="Chimezie Metu joins the team"
@@ -134,20 +141,18 @@
                 <span class="ml-auto">7 hrs ago</span>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Team Section with Timer -->
-    <div class="bg-gray-900 py-8 text-gray-200">
+    <section class="bg-gray-900 py-8 text-gray-200">
       <div class="container mx-auto px-4">
         <div class="bg-white p-4">
-          <!-- Header Section with Title and Countdown -->
           <div
             class="flex items-center justify-between py-4 px-8 bg-white shadow-b"
           >
-            <!-- Title Section -->
             <div class="flex items-center space-x-2">
               <h1
                 class="text-2xl font-semibold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-yellow-700"
@@ -228,9 +233,9 @@
                     <p>31</p>
                   </div>
                   <div>
-                    <p class="text-sm font-light uppercase">Wednesday</p>
+                    <p class="text-sm font-light uppercase">WEDNESDAY</p>
                     <p class="text-xs font-light uppercase text-gray-400">
-                      July
+                      JULY
                     </p>
                   </div>
                 </div>
@@ -301,12 +306,12 @@
                   class="flex items-center justify-center text-white text-4xl font-bold pr-4"
                 >
                   <div class="text-center">
-                    <p>31</p>
+                    <p>04</p>
                   </div>
                   <div>
-                    <p class="text-sm font-light uppercase">Wednesday</p>
+                    <p class="text-sm font-light uppercase">SUNDAY</p>
                     <p class="text-xs font-light uppercase text-gray-400">
-                      July
+                      AUGUST
                     </p>
                   </div>
                 </div>
@@ -318,7 +323,10 @@
                     alt="Barcelona Logo"
                     class="h-10"
                   />
-                  <span class="text-3xl text-gradient bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-yellow-700 font-bold">01:00</span>
+                  <span
+                    class="text-3xl text-gradient bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-yellow-700 font-bold"
+                    >01:00</span
+                  >
                   <img
                     src="./assets/Real_madrid.png"
                     alt="Real Madrid Logo"
@@ -341,6 +349,344 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!--Ticketing section-->
+    <section class="bg-gray-900 py-8 text-gray-200">
+      <div class="container mx-auto px-4">
+        <div class="bg-white p-4">
+          <div class="flex items-center justify-center py-4 px-8 bg-white">
+            <div class="flex items-center space-x-2">
+              <h1
+                class="text-3xl font-semibold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-yellow-700"
+              >
+                Murang'a
+              </h1>
+              <span
+                class="text-3xl font-semibold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-yellow-700"
+                >First Team</span
+              >
+            </div>
+          </div>
+
+          <article class="flex justify-center">
+            <!-- Cards Section -->
+            <div class="flex space-x-4 mt-6 ml-2">
+              <!-- Card 1 -->
+              <div class="bg-white shadow-md overflow-hidden">
+                <img src="./assets/team_players_1.png" alt="results section" />
+              </div>
+            </div>
+
+            <div class="flex space-x-4 mt-6 ml-2">
+              <!-- Card 1 -->
+              <div class="bg-white shadow-md overflow-hidden">
+                <img src="./assets/team_players_1.png" alt="results section" />
+              </div>
+            </div>
+
+            <div class="flex space-x-4 mt-6 ml-2">
+              <!-- Card 1 -->
+              <div class="bg-white shadow-md overflow-hidden">
+                <img
+                  src="./assets/team_women_player.png"
+                  alt="results section"
+                  class="h-full"
+                />
+              </div>
+            </div>
+          </article>
+
+          <article class="flex justify-center">
+            <!-- Cards Section -->
+            <div class="flex space-x-4 mt-6 ml-2">
+              <!-- Card 1 -->
+              <div class="bg-white shadow-md overflow-hidden">
+                <img src="./assets/team_players_1.png" alt="results section" />
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--Shopping section-->
+    <section class="bg-gray-900 py-8 text-gray-200">
+      <div class="container mx-auto px-4">
+        <div class="bg-white p-4">
+          <div class="flex items-center justify-center py-4 px-8 bg-white">
+            <div class="flex items-center space-x-2">
+              <h1
+                class="text-3xl font-semibold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-yellow-700"
+              >
+                Murang'a
+              </h1>
+              <span
+                class="text-3xl font-semibold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-yellow-700"
+                >Seal Store</span
+              >
+            </div>
+          </div>
+          <div class="flex justify-end mt-2 mb-4">
+            <button
+              class="bg-black text-white px-4 py-2 flex items-center justify-center space-x-2 ml-auto"
+            >
+              <span>OFFICIAL STORE MURANG’A SEAL</span>
+              <i class="fa fa-shopping-cart"></i>
+            </button>
+          </div>
+
+          <article class="flex justify-center">
+            <!-- Card 1 -->
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden w-1/4 mr-2"
+            >
+              <img
+                src="./assets/new_kit.png"
+                alt="New Kit"
+                class="w-full h-48 object-cover"
+              />
+              <div class="flex">
+                <!-- Seat Image -->
+                <div class="p-4 flex-1">
+                  <img
+                    src="./assets/kit.png"
+                    alt="Seat Memorabilia"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+
+                <!-- Text Section -->
+                <div class="p-4 flex-1">
+                  <h2 class="text-xl font-semibold">MEMORABILIA</h2>
+                  <p class="text-gray-500 mt-2">
+                    Take a piece of history home. The most exclusive products.
+                  </p>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    SHOP NOW <span class="ml-1">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden w-1/4 mr-2"
+            >
+              <img
+                src="./assets/training.png"
+                alt="Training"
+                class="w-full h-48 object-cover"
+              />
+              <div class="flex">
+                <!-- Seat Image -->
+                <div class="p-4 flex-1">
+                  <img
+                    src="./assets/training_man.png"
+                    alt="Seat Memorabilia"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+
+                <!-- Text Section -->
+                <div class="p-4 flex-1">
+                  <h2 class="text-xl font-semibold">MEMORABILIA</h2>
+                  <p class="text-gray-500 mt-2">
+                    Take a piece of history home. The most exclusive products.
+                  </p>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    SHOP NOW <span class="ml-1">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden w-1/4 mr-2"
+            >
+              <img
+                src="./assets/barcity.png"
+                alt="Barçity"
+                class="w-full h-48 object-cover"
+              />
+              <div class="flex">
+                <!-- Seat Image -->
+                <div class="p-4 flex-1">
+                  <img
+                    src="./assets/Igg.png"
+                    alt="Seat Memorabilia"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+
+                <!-- Text Section -->
+                <div class="p-4 flex-1">
+                  <h2 class="text-xl font-semibold">MEMORABILIA</h2>
+                  <p class="text-gray-500 mt-2">
+                    Take a piece of history home. The most exclusive products.
+                  </p>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    SHOP NOW <span class="ml-1">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="bg-white rounded-lg shadow-lg overflow-hidden w-1/4 mr-2"
+            >
+              <!-- Main Product Image -->
+              <img
+                src="./assets/memorabilia.png"
+                alt="Memorabilia"
+                class="w-full h-48 object-cover"
+              />
+
+              <div class="flex">
+                <!-- Seat Image -->
+                <div class="p-4 flex-1">
+                  <img
+                    src="./assets/seat.png"
+                    alt="Seat Memorabilia"
+                    class="w-full h-20 mt-10 object-cover"
+                  />
+                </div>
+
+                <!-- Text Section -->
+                <div class="p-4 flex-1">
+                  <h2 class="text-xl font-semibold">MEMORABILIA</h2>
+                  <p class="text-gray-500 mt-2">
+                    Take a piece of history home. The most exclusive products.
+                  </p>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    SHOP NOW <span class="ml-1">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-100 text-gray-800">
+      <!-- Store Header -->
+      <header class="text-center py-8">
+        <h1 class="text-3xl font-bold text-yellow-500">Murang’a seal Store</h1>
+        <div class="mt-2">
+          <button
+            class="bg-black text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2"
+          >
+            <span>OFFICIAL STORE MURANG’A SEAL</span>
+            <i class="fa fa-shopping-cart"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Card Section -->
+      <section
+        class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+      >
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            src="https://via.placeholder.com/300x200"
+            alt="New Kit"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h2 class="text-xl font-semibold">NEW KIT</h2>
+            <p class="text-gray-500 mt-2">
+              We already have it here! Get the new 2024-25 kit and be the first
+              to own it.
+            </p>
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center text-yellow-500 font-semibold"
+            >
+              SHOP NOW <span class="ml-1">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            src="https://via.placeholder.com/300x200"
+            alt="Training"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h2 class="text-xl font-semibold">TRAINING</h2>
+            <p class="text-gray-500 mt-2">
+              Get the new training collection and dress like your favorite
+              players.
+            </p>
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center text-yellow-500 font-semibold"
+            >
+              SHOP NOW <span class="ml-1">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            src="https://via.placeholder.com/300x200"
+            alt="Barçity"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h2 class="text-xl font-semibold">BARÇITY</h2>
+            <p class="text-gray-500 mt-2">
+              Discover Barçity collection, inspired by the college style.
+            </p>
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center text-yellow-500 font-semibold"
+            >
+              SHOP NOW <span class="ml-1">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            src="https://via.placeholder.com/300x200"
+            alt="Memorabilia"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4 text-center">
+            <h2 class="text-xl font-semibold">MEMORABILIA</h2>
+            <p class="text-gray-500 mt-2">
+              Take a piece of history home. The most exclusive products.
+            </p>
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center text-yellow-500 font-semibold"
+            >
+              SHOP NOW <span class="ml-1">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
   </body>
 </html>
