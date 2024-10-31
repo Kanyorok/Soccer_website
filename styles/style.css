@@ -29,3 +29,7 @@ a:hover {
 .round {
   border-radius: 50%;
 }
+
+#mobile-menu {
+  display: none;
+}

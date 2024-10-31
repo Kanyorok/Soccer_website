@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <script src="./js/script.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -16,16 +17,17 @@
   </head>
   <body class="bg-gray-900 text-white">
     <header class="relative">
-      <div
-        class="absolute top-1/2 -left-6 transform -translate-y-1/2 z-20 mx-4"
-      >
+      <div class="absolute top-1/2 left-6 transform -translate-y-1/2 z-20 mx-4">
         <img src="./assets/Muranga.png" alt="Logo" class="w-24 h-24" />
       </div>
       <div class="bg-[#131313] py-2">
         <div class="container mx-auto flex justify-between items-center px-4">
-          <div></div>
+          <!-- Logo on the Left -->
+          <div class="flex-grow"></div>
+          <!-- Spacer to push hamburger to the right -->
 
-          <div class="flex items-center space-x-4">
+          <!-- Login and Register Links -->
+          <div class="hidden md:flex items-center space-x-4">
             <a
               href="#"
               class="flex items-center hover:text-yellow-500 space-x-2"
@@ -45,10 +47,21 @@
               <span>Register</span>
             </a>
           </div>
+
+          <!-- Hamburger Icon for Mobile (aligned to the right) -->
+          <div class="md:hidden flex justify-end">
+            <button
+              id="hamburger-btn"
+              class="text-white focus:outline-none focus:text-yellow-500"
+            >
+              <i class="fa fa-bars text-2xl"></i>
+            </button>
+          </div>
         </div>
       </div>
       <div class="bg-black py-2">
         <div class="container mx-auto flex justify-between items-center">
+          <!-- Main Navigation Links for Desktop -->
           <nav class="hidden md:flex space-x-6 ml-16">
             <a href="#" class="hover:text-yellow-500">News</a>
             <a href="#" class="hover:text-yellow-500">Fixtures</a>
@@ -56,12 +69,24 @@
             <a href="#" class="hover:text-yellow-500">Statistics</a>
             <a href="#" class="hover:text-yellow-500">Our Club</a>
           </nav>
-          <div class="flex items-center space-x-4 mr-30">
+          <div class="hidden md:flex items-center space-x-4 mr-30">
             <a href="#" class="hover:text-yellow-500">Shop</a>
           </div>
         </div>
       </div>
       <div class="bg-yellow-500 h-2"></div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="bg-black py-2 md:hidden">
+        <nav class="flex flex-col items-start space-y-4 px-4">
+          <a href="#" class="hover:text-yellow-500">News</a>
+          <a href="#" class="hover:text-yellow-500">Fixtures</a>
+          <a href="#" class="hover:text-yellow-500">Team</a>
+          <a href="#" class="hover:text-yellow-500">Statistics</a>
+          <a href="#" class="hover:text-yellow-500">Our Club</a>
+          <a href="#" class="hover:text-yellow-500">Shop</a>
+        </nav>
+      </div>
     </header>
 
     <section class="relative">
@@ -147,7 +172,7 @@
     </section>
 
     <!-- Team Section with Timer -->
-    <section class="bg-gray-900 py-8 text-gray-200">
+    <section class="bg-gray-900 py-4 text-gray-200">
       <div class="container mx-auto px-4">
         <div class="bg-white p-4">
           <div
@@ -170,19 +195,17 @@
               <span class="text-xs uppercase tracking-wide">Next Match</span>
               <div>
                 <div
+                  id="countdown"
                   class="flex items-center space-x-2 text-yellow-600 font-bold text-3xl"
                 >
-                  <!-- Days -->
-                  <span>00</span>
-                  <span class="text-gray-400">:</span>
                   <!-- Hours -->
-                  <span>11</span>
+                  <span id="hours">20</span>
                   <span class="text-gray-400">:</span>
                   <!-- Minutes -->
-                  <span>46</span>
+                  <span id="minutes">00</span>
                   <span class="text-gray-400">:</span>
                   <!-- Seconds -->
-                  <span>21</span>
+                  <span id="seconds">00</span>
                 </div>
                 <!-- Labels -->
                 <div
@@ -352,7 +375,7 @@
     </section>
 
     <!--Ticketing section-->
-    <section class="bg-gray-900 py-8 text-gray-200">
+    <section class="bg-gray-900 py-4 text-gray-200">
       <div class="container mx-auto px-4">
         <div class="bg-white p-4">
           <div class="flex items-center justify-center py-4 px-8 bg-white">
@@ -411,7 +434,7 @@
     </section>
 
     <!--Shopping section-->
-    <section class="bg-gray-900 py-8 text-gray-200">
+    <section class="bg-gray-900 py-4 text-gray-200">
       <div class="container mx-auto px-4">
         <div class="bg-white p-4">
           <div class="flex items-center justify-center py-4 px-8 bg-white">
@@ -583,110 +606,321 @@
       </div>
     </section>
 
-    <section class="bg-gray-100 text-gray-800">
+    <section class="bg-gray-900 py-4 text-gray-200">
+      <div class="container mx-auto px-4">
+        <div class="bg-white p-4">
+          <div class="flex items-center justify-center py-4 px-8 bg-white">
+            <div class="flex items-center space-x-2">
+              <h1
+                class="text-3xl font-semibold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-yellow-700"
+              >
+                Murang'a
+              </h1>
+              <span
+                class="text-3xl font-semibold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-yellow-700"
+                >Seal News</span
+              >
+            </div>
+          </div>
+
+          <article class="flex justify-start">
+            <!-- Card 1 -->
+            <div class="bg-white shadow-lg overflow-hidden w-1/4 mr-2">
+              <img
+                src="./assets/new_team.png"
+                alt="New Kit"
+                class="w-full h-48 object-cover"
+              />
+              <div class="flex">
+                <!-- Text Section -->
+                <div class="p-4 text-center">
+                  <p class="text-black mt-2">
+                    Spain men in basketball and football<br />action
+                  </p>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> Club
+                  </a>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> 3 hrs ago
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white shadow-lg overflow-hidden w-1/4 mr-2">
+              <img
+                src="./assets/new_team.png"
+                alt="New Kit"
+                class="w-full h-48 object-cover"
+              />
+              <div class="flex">
+                <!-- Text Section -->
+                <div class="p-4 text-center">
+                  <p class="text-black mt-2">
+                    Spain men in basketball and football<br />action
+                  </p>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> Club
+                  </a>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> 3 hrs ago
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white shadow-lg overflow-hidden w-1/4 mr-2">
+              <img
+                src="./assets/new_team.png"
+                alt="New Kit"
+                class="w-full h-48 object-cover"
+              />
+              <div class="flex">
+                <!-- Text Section -->
+                <div class="p-4 text-center">
+                  <p class="text-black mt-2">
+                    Spain men in basketball and football<br />action
+                  </p>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> Club
+                  </a>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> 3 hrs ago
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white shadow-lg overflow-hidden w-1/4 mr-2">
+              <img
+                src="./assets/new_team.png"
+                alt="New Kit"
+                class="w-full h-48 object-cover"
+              />
+              <div class="flex">
+                <!-- Text Section -->
+                <div class="p-4 text-center">
+                  <p class="text-black mt-2">
+                    Spain men in basketball and football<br />action
+                  </p>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> Club
+                  </a>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> 3 hrs ago
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="flex justify-start">
+            <!-- Card 1 -->
+            <div class="bg-white shadow-lg overflow-hidden w-1/4 mr-2">
+              <img
+                src="./assets/new_team.png"
+                alt="New Kit"
+                class="w-full h-48 object-cover"
+              />
+              <div class="flex">
+                <!-- Text Section -->
+                <div class="p-4 text-center">
+                  <p class="text-black mt-2">
+                    Spain men in basketball and football<br />action
+                  </p>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> Club
+                  </a>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> 3 hrs ago
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white shadow-lg overflow-hidden w-1/4 mr-2">
+              <img
+                src="./assets/new_team.png"
+                alt="New Kit"
+                class="w-full h-48 object-cover"
+              />
+              <div class="flex">
+                <!-- Text Section -->
+                <div class="p-4 text-center">
+                  <p class="text-black mt-2">
+                    Spain men in basketball and football<br />action
+                  </p>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> Club
+                  </a>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> 3 hrs ago
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white shadow-lg overflow-hidden w-1/4 mr-2">
+              <img
+                src="./assets/new_team.png"
+                alt="New Kit"
+                class="w-full h-48 object-cover"
+              />
+              <div class="flex">
+                <!-- Text Section -->
+                <div class="p-4 text-center">
+                  <p class="text-black mt-2">
+                    Spain men in basketball and football<br />action
+                  </p>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> Club
+                  </a>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> 3 hrs ago
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white shadow-lg overflow-hidden w-1/4 mr-2">
+              <img
+                src="./assets/new_team.png"
+                alt="New Kit"
+                class="w-full h-48 object-cover"
+              />
+              <div class="flex">
+                <!-- Text Section -->
+                <div class="p-4 text-center">
+                  <p class="text-black mt-2">
+                    Spain men in basketball and football<br />action
+                  </p>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> Club
+                  </a>
+                  <a
+                    href="#"
+                    class="mt-4 inline-flex text-xs items-center text-black font-semibold"
+                  >
+                    <span class="ml-1">&rarr;</span> 3 hrs ago
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black text-gray-800">
       <!-- Store Header -->
-      <header class="text-center py-8">
-        <h1 class="text-3xl font-bold text-yellow-500">Murang’a seal Store</h1>
-        <div class="mt-2">
+      <header class="flex justify-between text-center py-8">
+        <div class="mt-2 ml-10">
           <button
-            class="bg-black text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2"
+            class="bg-black text-yellow-500 px-4 py-2 rounded-lg flex items-center justify-center space-x-2"
           >
-            <span>OFFICIAL STORE MURANG’A SEAL</span>
-            <i class="fa fa-shopping-cart"></i>
+            <span>MAIN PARTNERS</span>
+          </button>
+        </div>
+        <div class="mt-2 mr-2">
+          <button
+            class="bg-yellow-500 text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2"
+          >
+            <span>VIEW ALL PARTNERS</span>
           </button>
         </div>
       </header>
 
       <!-- Card Section -->
-      <section
-        class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-      >
-        <!-- Card 1 -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="New Kit"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-4 text-center">
-            <h2 class="text-xl font-semibold">NEW KIT</h2>
-            <p class="text-gray-500 mt-2">
-              We already have it here! Get the new 2024-25 kit and be the first
-              to own it.
-            </p>
-            <a
-              href="#"
-              class="mt-4 inline-flex items-center text-yellow-500 font-semibold"
-            >
-              SHOP NOW <span class="ml-1">&rarr;</span>
-            </a>
-          </div>
-        </div>
+      <section class="container mx-auto px-4">
+        <img
+          src="./assets/sponsors.png"
+          alt="sponsors"
+          class="w-full object-cover"
+        />
+      </section>
 
-        <!-- Card 2 -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="Training"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-4 text-center">
-            <h2 class="text-xl font-semibold">TRAINING</h2>
-            <p class="text-gray-500 mt-2">
-              Get the new training collection and dress like your favorite
-              players.
-            </p>
-            <a
-              href="#"
-              class="mt-4 inline-flex items-center text-yellow-500 font-semibold"
-            >
-              SHOP NOW <span class="ml-1">&rarr;</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="Barçity"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-4 text-center">
-            <h2 class="text-xl font-semibold">BARÇITY</h2>
-            <p class="text-gray-500 mt-2">
-              Discover Barçity collection, inspired by the college style.
-            </p>
-            <a
-              href="#"
-              class="mt-4 inline-flex items-center text-yellow-500 font-semibold"
-            >
-              SHOP NOW <span class="ml-1">&rarr;</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="Memorabilia"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-4 text-center">
-            <h2 class="text-xl font-semibold">MEMORABILIA</h2>
-            <p class="text-gray-500 mt-2">
-              Take a piece of history home. The most exclusive products.
-            </p>
-            <a
-              href="#"
-              class="mt-4 inline-flex items-center text-yellow-500 font-semibold"
-            >
-              SHOP NOW <span class="ml-1">&rarr;</span>
-            </a>
-          </div>
-        </div>
+      <!-- Card Section -->
+      <section class="container mx-auto px-4">
+        <img
+          src="./assets/group_footer.png"
+          alt="sponsors"
+          class="w-full object-cover"
+        />
       </section>
     </section>
+
+    <script>
+      // Toggle Mobile Menu
+      document
+        .getElementById("hamburger-btn")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          const logo = document.querySelector("header .absolute img");
+          const hamburgerIcon = document.querySelector("#hamburger-btn i");
+    
+          if (menu.style.display === "none" || menu.style.display === "") {
+            menu.style.display = "block";
+            logo.style.display = "none"; 
+            hamburgerIcon.classList.remove("fa-bars"); 
+            hamburgerIcon.classList.add("fa-times");
+          } else {
+            menu.style.display = "none";
+            logo.style.display = "block"; 
+            hamburgerIcon.classList.remove("fa-times"); 
+            hamburgerIcon.classList.add("fa-bars");
+          }
+        });
+    </script>    
   </body>
 </html>
