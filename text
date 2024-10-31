@@ -1,0 +1,16 @@
+<div
+                id="countdown"
+                class="flex items-center space-x-2 text-yellow-600 font-bold text-3xl"
+              >
+                <!-- Days -->
+                <span>00</span>
+                <span class="text-gray-400">:</span>
+                <!-- Hours -->
+                <span id="hours">11</span>
+                <span class="text-gray-400">:</span>
+                <!-- Minutes -->
+                <span id="minutes">46</span>
+                <span class="text-gray-400">:</span>
+                <!-- Seconds -->
+                <span id="seconds">21</span>
+              </div>
